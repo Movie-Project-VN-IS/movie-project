@@ -1,3 +1,9 @@
+$(document).ready(function(){
+    alert('Page loading')
+});
+    "use strict"
+
+
 const reviewObj = {
     restaurant_id: 1,
     name: 'Codey',
@@ -17,3 +23,6 @@ let responses = fetch(url,options)
 
 //how to talk to the form?
 // how does the form talk to the database?
+
+//page loading
+
