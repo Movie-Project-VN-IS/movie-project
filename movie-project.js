@@ -24,5 +24,20 @@ let responses = fetch(url,options)
 //how to talk to the form?
 // how does the form talk to the database?
 
-//page loading
+//
+var newMovie = $("#movie-add")
+var newTitle = $("#movie-title-new");
+
+function newMovie(e){
+    e.preventDefault();
+    var addedMovie = {id: coffees.length + 1, name: newCoffeeName.value, roast: newRoast.value};
+    coffees.unshift(addedCoffee);
+    for(var i = 1; i < coffees.length - 1; i++) {
+        if (newCoffeeName.value.toLowerCase() === coffees[i].name.toLowerCase()) {
+            coffees.shift(addedCoffee);
+        }
+    }
+    tbody.innerHTML = renderCoffees(coffees);
+}
+
 
