@@ -15,5 +15,7 @@ const options = {
 let responses = fetch(url,options)
     responses.then(response => response.json()).then(movies=>console.log(movies))
 
-//how to talk to the form?
+// how to talk to the form?
 // how does the form talk to the database?
+
+
