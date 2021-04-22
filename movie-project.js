@@ -21,8 +21,8 @@ const url = 'https://lyrical-leeward-vinyl.glitch.me/movies';
 
         function renderMovies(movie) {
             let html = "";
-            html += `<div>${movie.title}</div>`
-            html += `<div>${movie.rating}</div>`
+            html += `<div>Movie: ${movie.title}</div>`
+            html += `<div>Rating: ${movie.rating}</div>`
             // html +=`<div>${movie.genre}</div>`
             // html +=`<div>${movie.year}</div>`
 
