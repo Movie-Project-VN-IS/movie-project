@@ -73,4 +73,31 @@ const url = 'https://lyrical-leeward-vinyl.glitch.me/movies';
 
     })
 
+    let putURL = 'https://lyrical-leeward-vinyl.glitch.me/movies'
+
+
+
+    $("#edit-movie-submit").click(function(e) {
+        e.preventDefault();
+        let editedmovieTitle = $("#edit-movie").val()
+        let editedmovieRating = $("#edit-movie").val()
+
+        let editedMovieObj = {title: editedmovieTitle, rating: editedmovieRating}; //this came from the input
+        console.log(editedMovieObj);
+
+        let options = {
+            method: "PUT",
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(editedMovieObj)
+        }
+
+        fetch(putURL, options).then(function (response) {
+            console.log(response)
+
+        });
+    });
+
+
 });
