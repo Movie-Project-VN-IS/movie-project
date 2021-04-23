@@ -79,9 +79,8 @@ const url = 'https://lyrical-leeward-vinyl.glitch.me/movies';
 
     $("#edit-movie-submit").click(function(e) {
         e.preventDefault();
-        // let editedmovieTitle = $("#edit-movie-title").val()
+        let editedmovieTitle = $("#edit-movie-title").val()
         let editedmovieRating = $("#edit-movie-rating").val()
-        let editedmovieTitle = "down"
         console.log(editedmovieTitle)
         console.log(editedmovieRating)
 
@@ -106,7 +105,6 @@ const url = 'https://lyrical-leeward-vinyl.glitch.me/movies';
 
 });
 
-// grab the value of the title, line 84 (eventually bc right now it is hard coded). Rating is working fine
 
 // figure out a search function (a comparison) to identify what we are targeting (i.e. which movie? what are you editing?)
 
