@@ -74,20 +74,23 @@ const url = 'https://lyrical-leeward-vinyl.glitch.me/movies';
 
     })
 
+
     let putURL = 'https://lyrical-leeward-vinyl.glitch.me/movies'
-
-
 
     $("#edit-movie-submit").click(function(e) {
         e.preventDefault();
-        let editedmovieTitle = $("#edit-movie").val()
-        let editedmovieRating = $("#edit-movie").val()
+        // let editedmovieTitle = $("#edit-movie-title").val()
+        let editedmovieRating = $("#edit-movie-rating").val()
+        let editedmovieTitle = "down"
+        console.log(editedmovieTitle)
+        console.log(editedmovieRating)
 
-        let editedMovieObj = {title: editedmovieTitle, rating: editedmovieRating}; //this came from the input
+// * check notes below
+        let editedMovieObj = {rating: editedmovieRating}; //this came from the input
         console.log(editedMovieObj);
 
         let options = {
-            method: "PUT",
+            method: "PATCH",
             headers: {
                 'Content-Type': 'application/json',
             },
@@ -102,4 +105,12 @@ const url = 'https://lyrical-leeward-vinyl.glitch.me/movies';
 
 
 });
+
+// grab the value of the title, line 84 (eventually bc right now it is hard coded). Rating is working fine
+
+// figure out a search function (a comparison) to identify what we are targeting (i.e. which movie? what are you editing?)
+
+// * create a loop that will search through the array of movies to match the title, (this gets done below the click function)
+
+// once it targets the id, put that into to the url(create a function to do that versus manually typing the id at the end of the url)
 
