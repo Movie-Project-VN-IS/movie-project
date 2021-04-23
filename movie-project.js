@@ -21,8 +21,8 @@ const url = 'https://lyrical-leeward-vinyl.glitch.me/movies';
 
         function renderMovies(movie) {
             let html = "";
-            html += `<div>${movie.title}</div>`
-            html += `<div>${movie.rating}</div>`
+            html += `<div>Movie: ${movie.title}</div>`
+            html += `<div>Rating: ${movie.rating}</div>`
             // html +=`<div>${movie.genre}</div>`
             // html +=`<div>${movie.year}</div>`
 
@@ -72,5 +72,32 @@ const url = 'https://lyrical-leeward-vinyl.glitch.me/movies';
             .catch(/* handle errors */);
 
     })
+
+    let putURL = 'https://lyrical-leeward-vinyl.glitch.me/movies'
+
+
+
+    $("#edit-movie-submit").click(function(e) {
+        e.preventDefault();
+        let editedmovieTitle = $("#edit-movie").val()
+        let editedmovieRating = $("#edit-movie").val()
+
+        let editedMovieObj = {title: editedmovieTitle, rating: editedmovieRating}; //this came from the input
+        console.log(editedMovieObj);
+
+        let options = {
+            method: "PUT",
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(editedMovieObj)
+        }
+
+        fetch(putURL, options).then(function (response) {
+            console.log(response)
+
+        });
+    });
+
 
 });
