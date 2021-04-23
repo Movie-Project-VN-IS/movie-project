@@ -9,19 +9,19 @@
 <h1> Welcome to our Movie Page! </h1>
 
 
-
-
 <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 
 <script src = "movie-project.js"></script>
+
+<div id = loading>Page is Loading</div>
 
 <div id="movie-add">
     <h2>Add a Movie!</h2>
     <form>
         <h3>Tell us your favorite movie:</h3>
         <label for="movie-title-new"></label>
-        <input id="movie-title-new" type="text" placeholder="Add your movie here">
-        <input class="submitButtons" id="coffee-name-new-submit" type="submit"/>
+        <input id="movie-title-new" type="text" placeholder="add your movie here">
+
 
         <h3> Rate this title </h3>
         <label for="rating"></label>
@@ -32,13 +32,36 @@
             <option>4</option>
             <option>5</option>
         </select>
+        <input class="submitButtons" id="movie-name-new-submit" type="Submit"/>
     </form>
 
+    <div id="Movie-Edit">
+        <h3> Edit your movie </h3>
+        <form>
+            <label for ="edit-movie">Movie Title:</label>
+            <input id=“edit-movie” type="text" placeholder="change your movie">
+
+
+            <h3> Change your rating </h3>
+            <label for=“edit-movie”>Rating:</label>
+            <select id="edit-movie">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+            </select>
+
+            <br><br>
+            <input class="submitButton2" id="edit-movie-submit" type="Submit"/>
+        </form>
+    </div>
+    <br><br>
+</div>
+
+<div id = "movie-list">
 
 </div>
-</div>
-
-
 
 
 </body>
